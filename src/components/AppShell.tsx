@@ -24,7 +24,7 @@ export const NAV_ITEMS = [
   { to: "/assistant", label: "AI Chatbot", icon: Bot, blurb: "Ask Nova anything" },
 ] as const;
 
-function NavList({ onNavigate }: { onNavigate?: () => void }) {
+function NavList({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   return (
     <nav className="flex flex-col gap-1">
       {NAV_ITEMS.map((item) => (
